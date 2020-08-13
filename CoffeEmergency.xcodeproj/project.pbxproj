@@ -10,6 +10,8 @@
 		07684CAA24E5CF940090EE74 /* CafeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684CA824E5CF940090EE74 /* CafeCollectionViewCell.swift */; };
 		07684CAB24E5CF940090EE74 /* CafeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07684CA924E5CF940090EE74 /* CafeCollectionViewCell.xib */; };
 		07684CB024E5D9A60090EE74 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684CAF24E5D9A60090EE74 /* UIImageView+Extensions.swift */; };
+		07684CB624E5F8E10090EE74 /* HomeHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684CB424E5F8E10090EE74 /* HomeHeaderCollectionReusableView.swift */; };
+		07684CB724E5F8E10090EE74 /* HomeHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07684CB524E5F8E10090EE74 /* HomeHeaderCollectionReusableView.xib */; };
 		07E524FF24E521E800823AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E524FE24E521E800823AF8 /* AppDelegate.swift */; };
 		07E5250124E521E800823AF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5250024E521E800823AF8 /* SceneDelegate.swift */; };
 		07E5250324E521E800823AF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5250224E521E800823AF8 /* HomeViewController.swift */; };
@@ -53,6 +55,8 @@
 		07684CA824E5CF940090EE74 /* CafeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeCollectionViewCell.swift; sourceTree = "<group>"; };
 		07684CA924E5CF940090EE74 /* CafeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeCollectionViewCell.xib; sourceTree = "<group>"; };
 		07684CAF24E5D9A60090EE74 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		07684CB424E5F8E10090EE74 /* HomeHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		07684CB524E5F8E10090EE74 /* HomeHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		07E524FB24E521E800823AF8 /* CoffeEmergency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeEmergency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E524FE24E521E800823AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07E5250024E521E800823AF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,25 @@
 				07684CA924E5CF940090EE74 /* CafeCollectionViewCell.xib */,
 			);
 			path = CafeCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		07684CB124E5F6ED0090EE74 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				07684CAC24E5CF9C0090EE74 /* CafeCollectionViewCell */,
+				07684CB824E5F8EC0090EE74 /* HomeHeaderCollectionReusableView */,
+				07E5250224E521E800823AF8 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		07684CB824E5F8EC0090EE74 /* HomeHeaderCollectionReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				07684CB424E5F8E10090EE74 /* HomeHeaderCollectionReusableView.swift */,
+				07684CB524E5F8E10090EE74 /* HomeHeaderCollectionReusableView.xib */,
+			);
+			path = HomeHeaderCollectionReusableView;
 			sourceTree = "<group>";
 		};
 		07E524F224E521E800823AF8 = {
@@ -195,8 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				07E5250424E521E800823AF8 /* Main.storyboard */,
-				07684CAC24E5CF9C0090EE74 /* CafeCollectionViewCell */,
-				07E5250224E521E800823AF8 /* HomeViewController.swift */,
+				07684CB124E5F6ED0090EE74 /* Home */,
 				07E5254024E5A81200823AF8 /* MapViewController.swift */,
 			);
 			path = Views;
@@ -326,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E5250B24E521EA00823AF8 /* LaunchScreen.storyboard in Resources */,
+				07684CB724E5F8E10090EE74 /* HomeHeaderCollectionReusableView.xib in Resources */,
 				07684CAB24E5CF940090EE74 /* CafeCollectionViewCell.xib in Resources */,
 				07E5250824E521EA00823AF8 /* Assets.xcassets in Resources */,
 				07E5250624E521E800823AF8 /* Main.storyboard in Resources */,
@@ -360,6 +383,7 @@
 				07684CB024E5D9A60090EE74 /* UIImageView+Extensions.swift in Sources */,
 				07E5255024E5B65500823AF8 /* CafeModel.swift in Sources */,
 				07E5254324E5A94000823AF8 /* HomeViewModel.swift in Sources */,
+				07684CB624E5F8E10090EE74 /* HomeHeaderCollectionReusableView.swift in Sources */,
 				07E5253724E532EF00823AF8 /* Coordinator.swift in Sources */,
 				07E5254124E5A81200823AF8 /* MapViewController.swift in Sources */,
 				07E5253D24E5335500823AF8 /* UIViewController+Extensions.swift in Sources */,
