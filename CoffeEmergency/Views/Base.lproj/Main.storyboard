@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,25 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1U-8G-0IA">
-                                <rect key="frame" x="190.5" y="433" width="33" height="30"/>
-                                <state key="normal" title="MAP"/>
-                                <connections>
-                                    <action selector="onToMapPressed:" destination="fF8-JF-eo1" eventType="touchUpInside" id="DAj-t9-WfA"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DusseldorfMap" translatesAutoresizingMaskIntoConstraints="NO" id="ZOx-0A-0Wo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hdO-2C-C0Q">
+                                <rect key="frame" x="20" y="432" width="374" height="32.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finding nearest cafés..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="os7-NP-ReK">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="32.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <color key="textColor" name="BrandBodyTextBrown"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="BrandBackgroundBrown"/>
                         <constraints>
-                            <constraint firstItem="d1U-8G-0IA" firstAttribute="centerY" secondItem="Jt6-ya-ciT" secondAttribute="centerY" id="43h-Kc-Afy"/>
-                            <constraint firstItem="d1U-8G-0IA" firstAttribute="centerX" secondItem="Jt6-ya-ciT" secondAttribute="centerX" id="xsH-A5-59y"/>
+                            <constraint firstItem="hdO-2C-C0Q" firstAttribute="leading" secondItem="Oug-2o-anE" secondAttribute="leading" constant="20" id="5BP-Hu-bWu"/>
+                            <constraint firstItem="Oug-2o-anE" firstAttribute="trailing" secondItem="hdO-2C-C0Q" secondAttribute="trailing" constant="20" id="Mm3-9L-dTg"/>
+                            <constraint firstItem="hdO-2C-C0Q" firstAttribute="centerY" secondItem="Jt6-ya-ciT" secondAttribute="centerY" id="ODK-KX-bWu"/>
+                            <constraint firstItem="hdO-2C-C0Q" firstAttribute="centerX" secondItem="Jt6-ya-ciT" secondAttribute="centerX" id="WAX-lR-QtI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Oug-2o-anE"/>
                     </view>
+                    <connections>
+                        <outlet property="FetchStatusLabel" destination="os7-NP-ReK" id="r0P-QU-guR"/>
+                        <outlet property="FetchStatusStackView" destination="hdO-2C-C0Q" id="mfI-zd-5pq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SwI-p7-hsd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15" y="35"/>
+            <point key="canvasLocation" x="14.492753623188406" y="34.821428571428569"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="M6L-mB-Xoc">
@@ -42,7 +57,7 @@
                     <view key="view" contentMode="scaleToFill" id="l9O-P2-lIN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="BrandBackgroundBrown"/>
                         <viewLayoutGuide key="safeArea" id="IcO-Ms-ZeB"/>
                     </view>
                 </viewController>
@@ -51,4 +66,13 @@
             <point key="canvasLocation" x="884" y="35"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DusseldorfMap" width="2656" height="1370"/>
+        <namedColor name="BrandBackgroundBrown">
+            <color red="0.96862745098039216" green="0.94901960784313721" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandBodyTextBrown">
+            <color red="0.26666666666666666" green="0.21176470588235294" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

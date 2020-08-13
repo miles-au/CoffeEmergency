@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // create app coordinator using window from scene, and navigation controller
         let window = UIWindow(windowScene: scene)
+        window.tintColor = UIColor(named: "BrandGreen") // change default tint color
         appCoordinator = AppCoordinator(window: window, navigationController: navigationController)
         appCoordinator?.start() // start the app coordinator
         

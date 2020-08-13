@@ -10,16 +10,27 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var FetchStatusStackView: UIStackView!
+    @IBOutlet weak var FetchStatusLabel: UILabel!
+    
     var viewModel: HomeViewModel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        viewModel.viewDelegate = self
+        viewModel.fetchCafes()
     }
 
-    @IBAction func onToMapPressed(_ sender: UIButton) {
-        viewModel?.showMap()
-    }
+//    @IBAction func onToMapPressed(_ sender: UIButton) {
+//        viewModel?.showMap()
+//    }
     
+}
+
+// MARK: - Communication with ViewModel
+extension HomeViewController: HomeViewModelViewDelegate{
+    func fetchCafesDidRespond(with result: Result<[CafeModel], Error>) {
+        print("fetched result: \(result)")
+    }
 }
 
