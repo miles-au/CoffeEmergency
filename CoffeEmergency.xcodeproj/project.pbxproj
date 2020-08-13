@@ -20,6 +20,10 @@
 		07E5253924E5331400823AF8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5253824E5331400823AF8 /* AppCoordinator.swift */; };
 		07E5253B24E5333D00823AF8 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5253A24E5333D00823AF8 /* HomeCoordinator.swift */; };
 		07E5253D24E5335500823AF8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5253C24E5335500823AF8 /* UIViewController+Extensions.swift */; };
+		07E5254124E5A81200823AF8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5254024E5A81200823AF8 /* MapViewController.swift */; };
+		07E5254324E5A94000823AF8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5254224E5A94000823AF8 /* HomeViewModel.swift */; };
+		07E5254524E5A9CB00823AF8 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5254424E5A9CB00823AF8 /* MapCoordinator.swift */; };
+		07E5254724E5AA1A00823AF8 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5254624E5AA1A00823AF8 /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		07E5253824E5331400823AF8 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		07E5253A24E5333D00823AF8 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		07E5253C24E5335500823AF8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		07E5254024E5A81200823AF8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		07E5254224E5A94000823AF8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		07E5254424E5A9CB00823AF8 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
+		07E5254624E5AA1A00823AF8 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +123,6 @@
 				07E5253424E5254600823AF8 /* Views */,
 				07E524FE24E521E800823AF8 /* AppDelegate.swift */,
 				07E5250024E521E800823AF8 /* SceneDelegate.swift */,
-				07E5250424E521E800823AF8 /* Main.storyboard */,
 				07E5250724E521EA00823AF8 /* Assets.xcassets */,
 				07E5250924E521EA00823AF8 /* LaunchScreen.storyboard */,
 				07E5250C24E521EA00823AF8 /* Info.plist */,
@@ -148,6 +155,7 @@
 				07E5253624E532EF00823AF8 /* Coordinator.swift */,
 				07E5253824E5331400823AF8 /* AppCoordinator.swift */,
 				07E5253A24E5333D00823AF8 /* HomeCoordinator.swift */,
+				07E5254424E5A9CB00823AF8 /* MapCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -155,6 +163,8 @@
 		07E5253324E5254000823AF8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				07E5254224E5A94000823AF8 /* HomeViewModel.swift */,
+				07E5254624E5AA1A00823AF8 /* MapViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -162,7 +172,9 @@
 		07E5253424E5254600823AF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				07E5250424E521E800823AF8 /* Main.storyboard */,
 				07E5250224E521E800823AF8 /* HomeViewController.swift */,
+				07E5254024E5A81200823AF8 /* MapViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,12 +320,16 @@
 			files = (
 				07E5253924E5331400823AF8 /* AppCoordinator.swift in Sources */,
 				07E5250324E521E800823AF8 /* HomeViewController.swift in Sources */,
+				07E5254524E5A9CB00823AF8 /* MapCoordinator.swift in Sources */,
 				07E5252F24E521F800823AF8 /* Secrets.swift in Sources */,
+				07E5254324E5A94000823AF8 /* HomeViewModel.swift in Sources */,
 				07E5253724E532EF00823AF8 /* Coordinator.swift in Sources */,
+				07E5254124E5A81200823AF8 /* MapViewController.swift in Sources */,
 				07E5253D24E5335500823AF8 /* UIViewController+Extensions.swift in Sources */,
 				07E524FF24E521E800823AF8 /* AppDelegate.swift in Sources */,
 				07E5253B24E5333D00823AF8 /* HomeCoordinator.swift in Sources */,
 				07E5250124E521E800823AF8 /* SceneDelegate.swift in Sources */,
+				07E5254724E5AA1A00823AF8 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
