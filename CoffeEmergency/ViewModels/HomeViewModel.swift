@@ -29,7 +29,9 @@ class HomeViewModel: CafeManagerDelegate{
     
     /// send request to Model to fetch cafes
     func fetchCafes(){
-        cafeManager.fetchCafes()
+//        cafeManager.fetchCafes()
+        
+        didFetchCafes(with: .success(CafeModel.tempData))
     }
     
     /// receive resuilt from request to cafes

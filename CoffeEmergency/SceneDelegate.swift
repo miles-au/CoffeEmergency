@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         
         // create navigation controller
-        let navigationController = UINavigationController()
+        let navigationController = customNavigationController()
         
         // create app coordinator using window from scene, and navigation controller
         let window = UIWindow(windowScene: scene)
@@ -25,6 +25,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appCoordinator = AppCoordinator(window: window, navigationController: navigationController)
         appCoordinator?.start() // start the app coordinator
         
+    }
+    
+    func customNavigationController() -> UINavigationController{
+        let navigationController = UINavigationController()
+        
+        // make navbar transparent
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.isTranslucent = true
+        navigationController.view.backgroundColor = .clear
+        
+        return navigationController
     }
 }
 

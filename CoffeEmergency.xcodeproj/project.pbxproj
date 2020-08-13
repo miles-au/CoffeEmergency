@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07684CAA24E5CF940090EE74 /* CafeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684CA824E5CF940090EE74 /* CafeCollectionViewCell.swift */; };
+		07684CAB24E5CF940090EE74 /* CafeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07684CA924E5CF940090EE74 /* CafeCollectionViewCell.xib */; };
+		07684CB024E5D9A60090EE74 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684CAF24E5D9A60090EE74 /* UIImageView+Extensions.swift */; };
 		07E524FF24E521E800823AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E524FE24E521E800823AF8 /* AppDelegate.swift */; };
 		07E5250124E521E800823AF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5250024E521E800823AF8 /* SceneDelegate.swift */; };
 		07E5250324E521E800823AF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5250224E521E800823AF8 /* HomeViewController.swift */; };
@@ -47,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07684CA824E5CF940090EE74 /* CafeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeCollectionViewCell.swift; sourceTree = "<group>"; };
+		07684CA924E5CF940090EE74 /* CafeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeCollectionViewCell.xib; sourceTree = "<group>"; };
+		07684CAF24E5D9A60090EE74 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		07E524FB24E521E800823AF8 /* CoffeEmergency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeEmergency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E524FE24E521E800823AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07E5250024E521E800823AF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07684CAC24E5CF9C0090EE74 /* CafeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				07684CA824E5CF940090EE74 /* CafeCollectionViewCell.swift */,
+				07684CA924E5CF940090EE74 /* CafeCollectionViewCell.xib */,
+			);
+			path = CafeCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		07E524F224E521E800823AF8 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				07E5250424E521E800823AF8 /* Main.storyboard */,
+				07684CAC24E5CF9C0090EE74 /* CafeCollectionViewCell */,
 				07E5250224E521E800823AF8 /* HomeViewController.swift */,
 				07E5254024E5A81200823AF8 /* MapViewController.swift */,
 			);
@@ -190,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				07E5253C24E5335500823AF8 /* UIViewController+Extensions.swift */,
+				07684CAF24E5D9A60090EE74 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -309,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E5250B24E521EA00823AF8 /* LaunchScreen.storyboard in Resources */,
+				07684CAB24E5CF940090EE74 /* CafeCollectionViewCell.xib in Resources */,
 				07E5250824E521EA00823AF8 /* Assets.xcassets in Resources */,
 				07E5250624E521E800823AF8 /* Main.storyboard in Resources */,
 			);
@@ -339,6 +357,7 @@
 				07E5250324E521E800823AF8 /* HomeViewController.swift in Sources */,
 				07E5254524E5A9CB00823AF8 /* MapCoordinator.swift in Sources */,
 				07E5252F24E521F800823AF8 /* Secrets.swift in Sources */,
+				07684CB024E5D9A60090EE74 /* UIImageView+Extensions.swift in Sources */,
 				07E5255024E5B65500823AF8 /* CafeModel.swift in Sources */,
 				07E5254324E5A94000823AF8 /* HomeViewModel.swift in Sources */,
 				07E5253724E532EF00823AF8 /* Coordinator.swift in Sources */,
@@ -348,6 +367,7 @@
 				07E5253B24E5333D00823AF8 /* HomeCoordinator.swift in Sources */,
 				07E5254C24E5B64600823AF8 /* CafeManager.swift in Sources */,
 				07E5250124E521E800823AF8 /* SceneDelegate.swift in Sources */,
+				07684CAA24E5CF940090EE74 /* CafeCollectionViewCell.swift in Sources */,
 				07E5254E24E5B64D00823AF8 /* CafeData.swift in Sources */,
 				07E5254724E5AA1A00823AF8 /* MapViewModel.swift in Sources */,
 			);

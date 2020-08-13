@@ -16,10 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DusseldorfMap" translatesAutoresizingMaskIntoConstraints="NO" id="ZOx-0A-0Wo">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DusseldorfMap" translatesAutoresizingMaskIntoConstraints="NO" id="ZOx-0A-0Wo">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wNy-EI-Pun">
+                                <rect key="frame" x="5" y="49" width="404" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YMr-jr-A1T">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hdO-2C-C0Q">
                                 <rect key="frame" x="20" y="432" width="374" height="32.5"/>
                                 <subviews>
@@ -35,15 +45,24 @@
                         <color key="backgroundColor" name="BrandBackgroundBrown"/>
                         <constraints>
                             <constraint firstItem="hdO-2C-C0Q" firstAttribute="leading" secondItem="Oug-2o-anE" secondAttribute="leading" constant="20" id="5BP-Hu-bWu"/>
+                            <constraint firstItem="Oug-2o-anE" firstAttribute="bottom" secondItem="wNy-EI-Pun" secondAttribute="bottom" constant="5" id="CEH-vf-zbK"/>
+                            <constraint firstItem="ZOx-0A-0Wo" firstAttribute="top" secondItem="Jt6-ya-ciT" secondAttribute="top" id="Gzf-7g-Q8P"/>
+                            <constraint firstAttribute="bottom" secondItem="ZOx-0A-0Wo" secondAttribute="bottom" id="JDA-qg-xL7"/>
                             <constraint firstItem="Oug-2o-anE" firstAttribute="trailing" secondItem="hdO-2C-C0Q" secondAttribute="trailing" constant="20" id="Mm3-9L-dTg"/>
                             <constraint firstItem="hdO-2C-C0Q" firstAttribute="centerY" secondItem="Jt6-ya-ciT" secondAttribute="centerY" id="ODK-KX-bWu"/>
                             <constraint firstItem="hdO-2C-C0Q" firstAttribute="centerX" secondItem="Jt6-ya-ciT" secondAttribute="centerX" id="WAX-lR-QtI"/>
+                            <constraint firstAttribute="trailing" secondItem="ZOx-0A-0Wo" secondAttribute="trailing" id="YmT-eM-i6X"/>
+                            <constraint firstItem="wNy-EI-Pun" firstAttribute="top" secondItem="Oug-2o-anE" secondAttribute="top" constant="5" id="fbX-3z-8kM"/>
+                            <constraint firstItem="wNy-EI-Pun" firstAttribute="leading" secondItem="Oug-2o-anE" secondAttribute="leading" constant="5" id="h6q-0D-4ve"/>
+                            <constraint firstItem="Oug-2o-anE" firstAttribute="trailing" secondItem="wNy-EI-Pun" secondAttribute="trailing" constant="5" id="t21-Lq-nfJ"/>
+                            <constraint firstItem="ZOx-0A-0Wo" firstAttribute="leading" secondItem="Jt6-ya-ciT" secondAttribute="leading" id="tky-ZN-cbb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Oug-2o-anE"/>
                     </view>
                     <connections>
                         <outlet property="FetchStatusLabel" destination="os7-NP-ReK" id="r0P-QU-guR"/>
                         <outlet property="FetchStatusStackView" destination="hdO-2C-C0Q" id="mfI-zd-5pq"/>
+                        <outlet property="collectionView" destination="wNy-EI-Pun" id="1xa-3z-3nY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SwI-p7-hsd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -69,10 +88,10 @@
     <resources>
         <image name="DusseldorfMap" width="2656" height="1370"/>
         <namedColor name="BrandBackgroundBrown">
-            <color red="0.96862745098039216" green="0.94901960784313721" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96899998188018799" green="0.94900000095367432" blue="0.875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandBodyTextBrown">
-            <color red="0.26666666666666666" green="0.21176470588235294" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.2669999897480011" green="0.21199999749660492" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
