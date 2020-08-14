@@ -17,14 +17,15 @@ class HomeViewModel: CafeManagerDelegate{
     var coordinator: HomeCoordinator?
     var viewDelegate: HomeViewModelViewDelegate?
     var cafeManager = CafeManager()
+    var cafes = [CafeModel]()
     
     init() {
         cafeManager.delegate = self
     }
     
     /// Navigate to Map page to display businesses in map view
-    func showMap(at latitude: Double?, and longitude: Double?){
-        coordinator?.showMap(at: latitude, and: longitude)
+    func showMap(at cafe: CafeModel?, with cafes: [CafeModel]){
+        coordinator?.showMap(at: cafe, with: cafes)
     }
     
     /// send request to Model to fetch cafes

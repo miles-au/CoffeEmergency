@@ -19,7 +19,8 @@ class MapCoordinator: Coordinator{
     
     var delegate: MapCoordinatorDelegate?
     
-    var location: (Double?, Double?) // 0 - latitude, 1 - longitude
+    var selectedCafe: CafeModel?
+    var cafes = [CafeModel]()
     
     init(navigationController: UINavigationController){
         self.navigationController = navigationController
@@ -28,9 +29,8 @@ class MapCoordinator: Coordinator{
     func start() {
         // create view controller
         let mapViewController: MapViewController = .instantiate()
-        if let latitude = location.0, let longitude = location.1 {
-            mapViewController.focusedLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        }
+        mapViewController.selectedCafe = selectedCafe
+        mapViewController.cafes = cafes
         
         // create view model
         let mapViewModel = MapViewModel()

@@ -16,7 +16,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel: HomeViewModel!
-    var cafes = [CafeModel]()
     
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation?
@@ -44,7 +43,7 @@ extension HomeViewController: HomeViewModelViewDelegate{
         case .failure(let error):
             changeStatusLabel(text: error.localizedDescription)
         case .success(let cafes):
-            self.cafes = cafes
+            viewModel.cafes = cafes
             DispatchQueue.main.async {
                 self.FetchStatusStackView.isHidden = true
                 self.collectionView.reloadData()

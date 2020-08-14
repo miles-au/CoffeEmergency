@@ -11,31 +11,27 @@ import UIKit
 extension UIImageView {
     func downloaded(from url: URL) {
         // set image to nil while downloading. Reusable cells will show old images otherwise
-//        self.image = nil
+        self.image = nil
         
         // create loading view
         let _ = self.loadingView
         animateLoadingView()
         
         // download image
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-                else { return }
-            DispatchQueue.main.async {
-                self.loadingCircleLayer?.removeAllAnimations()
-                self.loadingCircleLayer?.removeFromSuperlayer()
-                self.image = image
-            }
-        }.resume()
+        UIImage.downloaded(from: url, completion: updateImage(image:))
     }
     
     func downloaded(from link: String) {
         guard let url = URL(string: link) else { return }
         downloaded(from: url)
+    }
+    
+    func updateImage(image: UIImage){
+        DispatchQueue.main.async {
+            self.loadingCircleLayer?.removeAllAnimations()
+            self.loadingCircleLayer?.removeFromSuperlayer()
+            self.image = image
+        }
     }
 }
 
@@ -99,7 +95,7 @@ extension UIImageView{
         // 2. Rotate the circle WHILE the circle is reversing the first animation.
         let secondHalf = animationSecondHalf()
         let rotate = rotateLoadingCircle()
-
+        
         // Package the whole animation
         let animation = CAAnimationGroup()
         animation.duration = 2.0
@@ -107,7 +103,7 @@ extension UIImageView{
         
         // Repeat forever
         animation.repeatDuration = Double.infinity
-
+        
         // run animation
         loadingCircleLayer.add(animation, forKey: "animateCircle")
     }

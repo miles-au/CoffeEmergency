@@ -23,28 +23,40 @@ class MapViewController: UIViewController {
         }
     }
     
-    var focusedLocation = CLLocationCoordinate2D()
-
+    var selectedCafe: CafeModel?
+    var cafes = [CafeModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        zoomToLocation()
+        mapView.delegate = self
         mapView.showsUserLocation = true
+        mapView.mapType = .mutedStandard
+        
+        // set region to selected cafe location if exists
+        if let latitude = selectedCafe?.latitude, let longitude = selectedCafe?.longitude{
+            zoomMap(to: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+        }else{
+            zoomMap(to: CLLocationCoordinate2D())
+        }
+        markCafes()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         viewModel?.viewDidFinish()
     }
-
-    func zoomToLocation(){
-        // set region to focused location (where cafe is)
-        let viewRegion = MKCoordinateRegion(center: focusedLocation, latitudinalMeters: 100, longitudinalMeters: 100)
+    
+    func zoomMap(to coordinates: CLLocationCoordinate2D){
+        let viewRegion = MKCoordinateRegion(center: coordinates, latitudinalMeters: 100, longitudinalMeters: 100)
         mapView.setRegion(viewRegion, animated: true)
-
-        // put pin on cafe
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: focusedLocation.latitude, longitude: focusedLocation.longitude)
-        mapView.addAnnotation(annotation)
+    }
+    
+    func markCafes(){
+        var annotations = [CafeAnnotation]()
+        for cafe in cafes{
+            annotations.append(CafeAnnotation(cafe: cafe))
+        }
+        mapView.addAnnotations(annotations)
     }
 }
 

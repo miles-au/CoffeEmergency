@@ -44,11 +44,12 @@ class HomeCoordinator: Coordinator{
 // MARK: - Navigation to Map Page
 extension HomeCoordinator: MapCoordinatorDelegate {
 
-    func showMap(at latitude: Double?, and longitude: Double?){
+    func showMap(at cafe: CafeModel?, with cafes: [CafeModel]){
         let mapCoordinator = MapCoordinator(navigationController: navigationController)
         childCoordinators.append(mapCoordinator) // append coordinator to prevent de-allocation
         mapCoordinator.delegate = self
-        mapCoordinator.location = (latitude, longitude)
+        mapCoordinator.selectedCafe = cafe
+        mapCoordinator.cafes = cafes
         mapCoordinator.start()
     }
     

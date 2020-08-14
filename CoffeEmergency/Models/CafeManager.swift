@@ -13,7 +13,7 @@ protocol CafeManagerDelegate{
 }
 
 class CafeManager{
-    let baseURL = "https://api.yelp.com/v3/businesses/search?limit=50&term=coffee&sort_by=distance&open_now=true"
+    let baseURL = "https://api.yelp.com/v3/businesses/search?&term=coffee&sort_by=distance&open_now=true"
     var delegate: CafeManagerDelegate?
     
     func fetchCafes(at latitude: Double, and longitude: Double){

@@ -14,6 +14,9 @@
 		07684CB724E5F8E10090EE74 /* HomeHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07684CB524E5F8E10090EE74 /* HomeHeaderCollectionReusableView.xib */; };
 		07684CBA24E6184C0090EE74 /* HomeViewController+CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684CB924E6184C0090EE74 /* HomeViewController+CLLocation.swift */; };
 		07684CBC24E618830090EE74 /* HomeViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684CBB24E618830090EE74 /* HomeViewController+CollectionView.swift */; };
+		07684CC324E645750090EE74 /* MapViewController+MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684CC224E645750090EE74 /* MapViewController+MapViewDelegate.swift */; };
+		07C71CBA24E710BD00E96B4E /* CafeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C71CB924E710BD00E96B4E /* CafeAnnotation.swift */; };
+		07C71CBC24E7153E00E96B4E /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C71CBB24E7153E00E96B4E /* UIImage+Extensions.swift */; };
 		07E524FF24E521E800823AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E524FE24E521E800823AF8 /* AppDelegate.swift */; };
 		07E5250124E521E800823AF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5250024E521E800823AF8 /* SceneDelegate.swift */; };
 		07E5250324E521E800823AF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5250224E521E800823AF8 /* HomeViewController.swift */; };
@@ -61,6 +64,9 @@
 		07684CB524E5F8E10090EE74 /* HomeHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		07684CB924E6184C0090EE74 /* HomeViewController+CLLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CLLocation.swift"; sourceTree = "<group>"; };
 		07684CBB24E618830090EE74 /* HomeViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		07684CC224E645750090EE74 /* MapViewController+MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+MapViewDelegate.swift"; sourceTree = "<group>"; };
+		07C71CB924E710BD00E96B4E /* CafeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeAnnotation.swift; sourceTree = "<group>"; };
+		07C71CBB24E7153E00E96B4E /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		07E524FB24E521E800823AF8 /* CoffeEmergency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeEmergency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E524FE24E521E800823AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07E5250024E521E800823AF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				07E5254024E5A81200823AF8 /* MapViewController.swift */,
+				07684CC224E645750090EE74 /* MapViewController+MapViewDelegate.swift */,
+				07C71CB924E710BD00E96B4E /* CafeAnnotation.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -243,6 +251,7 @@
 			children = (
 				07E5253C24E5335500823AF8 /* UIViewController+Extensions.swift */,
 				07684CAF24E5D9A60090EE74 /* UIImageView+Extensions.swift */,
+				07C71CBB24E7153E00E96B4E /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,11 +411,14 @@
 				07684CBA24E6184C0090EE74 /* HomeViewController+CLLocation.swift in Sources */,
 				07E5253724E532EF00823AF8 /* Coordinator.swift in Sources */,
 				07E5254124E5A81200823AF8 /* MapViewController.swift in Sources */,
+				07C71CBA24E710BD00E96B4E /* CafeAnnotation.swift in Sources */,
 				07E5253D24E5335500823AF8 /* UIViewController+Extensions.swift in Sources */,
 				07E524FF24E521E800823AF8 /* AppDelegate.swift in Sources */,
 				07E5253B24E5333D00823AF8 /* HomeCoordinator.swift in Sources */,
+				07C71CBC24E7153E00E96B4E /* UIImage+Extensions.swift in Sources */,
 				07E5254C24E5B64600823AF8 /* CafeManager.swift in Sources */,
 				07E5250124E521E800823AF8 /* SceneDelegate.swift in Sources */,
+				07684CC324E645750090EE74 /* MapViewController+MapViewDelegate.swift in Sources */,
 				07684CAA24E5CF940090EE74 /* CafeCollectionViewCell.swift in Sources */,
 				07E5254E24E5B64D00823AF8 /* CafeData.swift in Sources */,
 				07E5254724E5AA1A00823AF8 /* MapViewModel.swift in Sources */,
