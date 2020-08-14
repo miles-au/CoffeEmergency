@@ -23,10 +23,15 @@ class HomeCoordinator: Coordinator{
     }
     
     func start() {
+        // create view controller
         let homeViewController: HomeViewController = .instantiate()
+        
+        // create view model
         let homeViewModel = HomeViewModel()
         homeViewModel.coordinator = self
         homeViewController.viewModel = homeViewModel
+        
+        // push view controller
         navigationController.setViewControllers([homeViewController], animated: false)
     }
     
@@ -39,10 +44,11 @@ class HomeCoordinator: Coordinator{
 // MARK: - Navigation to Map Page
 extension HomeCoordinator: MapCoordinatorDelegate {
 
-    func showMap(){
+    func showMap(at latitude: Double?, and longitude: Double?){
         let mapCoordinator = MapCoordinator(navigationController: navigationController)
         childCoordinators.append(mapCoordinator) // append coordinator to prevent de-allocation
         mapCoordinator.delegate = self
+        mapCoordinator.location = (latitude, longitude)
         mapCoordinator.start()
     }
     
@@ -52,7 +58,6 @@ extension HomeCoordinator: MapCoordinatorDelegate {
             return childCoordinator is MapCoordinator
         }){
             childCoordinators.remove(at: index)
-            print("remove map")
         }
     }
 }

@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wNy-EI-Pun">
-                                <rect key="frame" x="5" y="49" width="404" height="808"/>
+                                <rect key="frame" x="5" y="49" width="404" height="847"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YMr-jr-A1T">
                                     <size key="itemSize" width="128" height="128"/>
@@ -45,12 +45,12 @@
                         <color key="backgroundColor" name="BrandBackgroundBrown"/>
                         <constraints>
                             <constraint firstItem="hdO-2C-C0Q" firstAttribute="leading" secondItem="Oug-2o-anE" secondAttribute="leading" constant="20" id="5BP-Hu-bWu"/>
-                            <constraint firstItem="Oug-2o-anE" firstAttribute="bottom" secondItem="wNy-EI-Pun" secondAttribute="bottom" constant="5" id="CEH-vf-zbK"/>
                             <constraint firstItem="ZOx-0A-0Wo" firstAttribute="top" secondItem="Jt6-ya-ciT" secondAttribute="top" id="Gzf-7g-Q8P"/>
                             <constraint firstAttribute="bottom" secondItem="ZOx-0A-0Wo" secondAttribute="bottom" id="JDA-qg-xL7"/>
                             <constraint firstItem="Oug-2o-anE" firstAttribute="trailing" secondItem="hdO-2C-C0Q" secondAttribute="trailing" constant="20" id="Mm3-9L-dTg"/>
                             <constraint firstItem="hdO-2C-C0Q" firstAttribute="centerY" secondItem="Jt6-ya-ciT" secondAttribute="centerY" id="ODK-KX-bWu"/>
                             <constraint firstItem="hdO-2C-C0Q" firstAttribute="centerX" secondItem="Jt6-ya-ciT" secondAttribute="centerX" id="WAX-lR-QtI"/>
+                            <constraint firstAttribute="bottom" secondItem="wNy-EI-Pun" secondAttribute="bottom" id="YbR-gx-26c"/>
                             <constraint firstAttribute="trailing" secondItem="ZOx-0A-0Wo" secondAttribute="trailing" id="YmT-eM-i6X"/>
                             <constraint firstItem="wNy-EI-Pun" firstAttribute="top" secondItem="Oug-2o-anE" secondAttribute="top" constant="5" id="fbX-3z-8kM"/>
                             <constraint firstItem="wNy-EI-Pun" firstAttribute="leading" secondItem="Oug-2o-anE" secondAttribute="leading" constant="5" id="h6q-0D-4ve"/>
@@ -76,13 +76,27 @@
                     <view key="view" contentMode="scaleToFill" id="l9O-P2-lIN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jqW-jU-w3n">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" name="BrandBackgroundBrown"/>
+                        <constraints>
+                            <constraint firstItem="IcO-Ms-ZeB" firstAttribute="trailing" secondItem="jqW-jU-w3n" secondAttribute="trailing" id="ChD-ph-jKc"/>
+                            <constraint firstItem="jqW-jU-w3n" firstAttribute="top" secondItem="l9O-P2-lIN" secondAttribute="top" id="GhN-sc-FUe"/>
+                            <constraint firstItem="jqW-jU-w3n" firstAttribute="leading" secondItem="IcO-Ms-ZeB" secondAttribute="leading" id="m10-bR-oBN"/>
+                            <constraint firstAttribute="bottom" secondItem="jqW-jU-w3n" secondAttribute="bottom" id="zAi-Pr-CUA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IcO-Ms-ZeB"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="jqW-jU-w3n" id="hdO-oJ-U62"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ee-gW-ouV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884" y="35"/>
+            <point key="canvasLocation" x="882.60869565217399" y="34.821428571428569"/>
         </scene>
     </scenes>
     <resources>

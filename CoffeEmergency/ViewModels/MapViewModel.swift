@@ -8,8 +8,7 @@
 
 import Foundation
 
-protocol MapViewModelViewDelegate: class
-{
+protocol MapViewModelViewDelegate: class{
 }
 
 class MapViewModel{

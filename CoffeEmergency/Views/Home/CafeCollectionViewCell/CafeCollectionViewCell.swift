@@ -13,6 +13,10 @@ class CafeCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "CafeCollectionViewCell"
     static let nibName = "CafeCollectionViewCell"
     
+    var viewModel: HomeViewModel?
+    var latitude: Double?
+    var longitude: Double?
+    
     @IBOutlet weak var coverPhotoImageView: UIImageView!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -23,18 +27,29 @@ class CafeCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func update(with cafe: CafeModel){
-        cafeName.text = cafe.name
+    func update(with cafe: CafeModel, and viewModel: HomeViewModel){
+        self.viewModel = viewModel
         
+        // set ui properties
+        cafeName.text = cafe.name
         coverPhotoImageView.downloaded(from: cafe.imageURL)
-        let roundedDistance = Double(round(10 * cafe.distance)/1000)
-        distanceLabel.text = "📐 \(roundedDistance)m"
+        distanceLabel.text = "📐 \(Double(round(10 * cafe.distance)/1000))m"
         if let priceText = cafe.price{
             priceLabel.text = "🏷 \(priceText)"
         }else{
             priceLabel.isHidden = true
         }
         ratingLabel.text = "⭐️ \(cafe.rating)"
+        
+        // set coordinates
+        latitude = cafe.latitude
+        longitude = cafe.longitude
     }
-
+    
+    @IBAction func showOnMapButtonPressed(_ sender: UIButton) {
+        if let latitude = latitude, let longitude = longitude{
+            viewModel?.showMap(at: latitude, and: longitude)
+        }
+    }
+    
 }

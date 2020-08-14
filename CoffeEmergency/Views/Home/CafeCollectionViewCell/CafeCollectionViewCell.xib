@@ -21,10 +21,10 @@
                         <rect key="frame" x="2.5" y="2.5" width="243" height="181"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vkf-Hn-bcC">
-                                <rect key="frame" x="0.0" y="0.0" width="243" height="70.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="243" height="65.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bd-eo-o2j">
-                                <rect key="frame" x="0.0" y="130" width="243" height="41"/>
+                                <rect key="frame" x="0.0" y="125" width="243" height="41"/>
                                 <color key="backgroundColor" name="BrandGreen"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <color key="tintColor" name="BrandBeige"/>
@@ -33,15 +33,18 @@
                                 <state key="normal" title="Map" image="mappin.and.ellipse" catalog="system">
                                     <color key="titleColor" name="BrandBeige"/>
                                 </state>
+                                <connections>
+                                    <action selector="showOnMapButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="weS-lk-PKu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local Cafe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toD-4j-4M0">
-                                <rect key="frame" x="0.0" y="75.5" width="243" height="23.5"/>
+                                <rect key="frame" x="0.0" y="70.5" width="243" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
                                 <color key="textColor" name="BrandLightBrown"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yNv-Ms-9Yg">
-                                <rect key="frame" x="0.0" y="104" width="243" height="21"/>
+                                <rect key="frame" x="0.0" y="99" width="243" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📐 10 m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGu-oE-Pza">
                                         <rect key="frame" x="0.0" y="0.0" width="81" height="21"/>
@@ -73,7 +76,7 @@
                             <constraint firstAttribute="trailing" secondItem="Vkf-Hn-bcC" secondAttribute="trailing" id="F5M-E6-NvS"/>
                             <constraint firstItem="toD-4j-4M0" firstAttribute="leading" secondItem="QES-vr-ucw" secondAttribute="leading" id="G2E-i3-JHr"/>
                             <constraint firstItem="yNv-Ms-9Yg" firstAttribute="top" secondItem="toD-4j-4M0" secondAttribute="bottom" constant="5" id="JSq-Iw-YpJ"/>
-                            <constraint firstAttribute="bottom" secondItem="8Bd-eo-o2j" secondAttribute="bottom" constant="10" id="Nzc-Nl-SLE"/>
+                            <constraint firstAttribute="bottom" secondItem="8Bd-eo-o2j" secondAttribute="bottom" constant="15" id="Nzc-Nl-SLE"/>
                             <constraint firstItem="8Bd-eo-o2j" firstAttribute="top" secondItem="yNv-Ms-9Yg" secondAttribute="bottom" constant="5" id="OjU-32-H7Y"/>
                             <constraint firstAttribute="trailing" secondItem="toD-4j-4M0" secondAttribute="trailing" id="UZY-ZU-BmC"/>
                             <constraint firstItem="Vkf-Hn-bcC" firstAttribute="leading" secondItem="QES-vr-ucw" secondAttribute="leading" id="pqq-8t-l9j"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class HomeViewController: UIViewController {
     
@@ -17,19 +18,23 @@ class HomeViewController: UIViewController {
     var viewModel: HomeViewModel!
     var cafes = [CafeModel]()
     
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewSetup()
         
         viewModel.viewDelegate = self
-        viewModel.fetchCafes()
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
     }
     
-    //    @IBAction func onToMapPressed(_ sender: UIButton) {
-    //        viewModel?.showMap()
-    //    }
-    
+    func changeStatusLabel(text: String){
+        FetchStatusLabel.text = text
+    }
 }
 
 // MARK: - Communication with ViewModel
@@ -37,65 +42,13 @@ extension HomeViewController: HomeViewModelViewDelegate{
     func fetchCafesDidRespond(with result: Result<[CafeModel], Error>) {
         switch result {
         case .failure(let error):
-            FetchStatusLabel.text = error.localizedDescription
+            changeStatusLabel(text: error.localizedDescription)
         case .success(let cafes):
             self.cafes = cafes
-            FetchStatusStackView.isHidden = true
-            collectionView.reloadData()
+            DispatchQueue.main.async {
+                self.FetchStatusStackView.isHidden = true
+                self.collectionView.reloadData()
+            }
         }
-    }
-}
-
-// MARK: - Collection View
-extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
-    
-    func collectionViewSetup(){
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        // register cells
-        collectionView.register(UINib(nibName:CafeCollectionViewCell.nibName, bundle: nil), forCellWithReuseIdentifier: CafeCollectionViewCell.reuseIdentifier)
-        
-        // register header
-        collectionView.register(UINib(nibName: HomeHeaderCollectionReusableView.nibName, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeHeaderCollectionReusableView.reuseIdentifer)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var numberOfColumns = 1
-        let width = view.frame.size.width - 10
-        let height = view.frame.size.height - 10
-        let aspectRatio = CGFloat(0.75) // Width / Height
-        
-        if width > height{
-            // landscape
-            numberOfColumns = width < 812 ? 2 : 3
-        } else{
-            // portrait
-            numberOfColumns = width < 415 ? 1 : 2
-        }
-        
-        let cellSize = width / CGFloat(numberOfColumns)
-        
-        return CGSize(width: cellSize, height: cellSize * aspectRatio)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cafes.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CafeCollectionViewCell.reuseIdentifier, for: indexPath) as! CafeCollectionViewCell
-        cell.update(with: cafes[indexPath.row])        
-        return cell
-    }
-    
-    // MARK: Collection Header
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeHeaderCollectionReusableView.reuseIdentifer, for: indexPath)
-        return header
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
     }
 }

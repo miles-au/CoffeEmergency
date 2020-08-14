@@ -13,11 +13,11 @@ protocol CafeManagerDelegate{
 }
 
 class CafeManager{
-    let baseURL = "https://api.yelp.com/v3/businesses/search?term=coffee&sort_by=distance&open_now=true"
+    let baseURL = "https://api.yelp.com/v3/businesses/search?limit=50&term=coffee&sort_by=distance&open_now=true"
     var delegate: CafeManagerDelegate?
     
-    func fetchCafes(){
-        guard let url = URL(string: "\(baseURL)&latitude=\(37.3318)&longitude=\(-122.0312)") else {
+    func fetchCafes(at latitude: Double, and longitude: Double){
+        guard let url = URL(string: "\(baseURL)&latitude=\(latitude)&longitude=\(longitude)") else {
             self.delegate?.didFetchCafes(with: .failure(NSError(domain: "Sorry, something went wrong.", code: 500, userInfo: nil)))
             return
         }

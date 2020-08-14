@@ -23,14 +23,13 @@ class HomeViewModel: CafeManagerDelegate{
     }
     
     /// Navigate to Map page to display businesses in map view
-    func showMap(){
-        coordinator?.showMap()
+    func showMap(at latitude: Double?, and longitude: Double?){
+        coordinator?.showMap(at: latitude, and: longitude)
     }
     
     /// send request to Model to fetch cafes
-    func fetchCafes(){
-//        cafeManager.fetchCafes()
-        
+    func fetchCafes(at latitude: Double, and longitude: Double){
+//        cafeManager.fetchCafes(at: latitude, and: longitude)
         didFetchCafes(with: .success(CafeModel.tempData))
     }
     

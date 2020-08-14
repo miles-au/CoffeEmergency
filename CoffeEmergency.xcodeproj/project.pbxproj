@@ -12,6 +12,8 @@
 		07684CB024E5D9A60090EE74 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684CAF24E5D9A60090EE74 /* UIImageView+Extensions.swift */; };
 		07684CB624E5F8E10090EE74 /* HomeHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684CB424E5F8E10090EE74 /* HomeHeaderCollectionReusableView.swift */; };
 		07684CB724E5F8E10090EE74 /* HomeHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07684CB524E5F8E10090EE74 /* HomeHeaderCollectionReusableView.xib */; };
+		07684CBA24E6184C0090EE74 /* HomeViewController+CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684CB924E6184C0090EE74 /* HomeViewController+CLLocation.swift */; };
+		07684CBC24E618830090EE74 /* HomeViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684CBB24E618830090EE74 /* HomeViewController+CollectionView.swift */; };
 		07E524FF24E521E800823AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E524FE24E521E800823AF8 /* AppDelegate.swift */; };
 		07E5250124E521E800823AF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5250024E521E800823AF8 /* SceneDelegate.swift */; };
 		07E5250324E521E800823AF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5250224E521E800823AF8 /* HomeViewController.swift */; };
@@ -57,6 +59,8 @@
 		07684CAF24E5D9A60090EE74 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		07684CB424E5F8E10090EE74 /* HomeHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		07684CB524E5F8E10090EE74 /* HomeHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		07684CB924E6184C0090EE74 /* HomeViewController+CLLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CLLocation.swift"; sourceTree = "<group>"; };
+		07684CBB24E618830090EE74 /* HomeViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		07E524FB24E521E800823AF8 /* CoffeEmergency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeEmergency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E524FE24E521E800823AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07E5250024E521E800823AF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				07684CAC24E5CF9C0090EE74 /* CafeCollectionViewCell */,
 				07684CB824E5F8EC0090EE74 /* HomeHeaderCollectionReusableView */,
 				07E5250224E521E800823AF8 /* HomeViewController.swift */,
+				07684CBB24E618830090EE74 /* HomeViewController+CollectionView.swift */,
+				07684CB924E6184C0090EE74 /* HomeViewController+CLLocation.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -136,6 +142,14 @@
 				07684CB524E5F8E10090EE74 /* HomeHeaderCollectionReusableView.xib */,
 			);
 			path = HomeHeaderCollectionReusableView;
+			sourceTree = "<group>";
+		};
+		07684CBD24E620090090EE74 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				07E5254024E5A81200823AF8 /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		07E524F224E521E800823AF8 = {
@@ -219,7 +233,7 @@
 			children = (
 				07E5250424E521E800823AF8 /* Main.storyboard */,
 				07684CB124E5F6ED0090EE74 /* Home */,
-				07E5254024E5A81200823AF8 /* MapViewController.swift */,
+				07684CBD24E620090090EE74 /* Map */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -380,10 +394,12 @@
 				07E5250324E521E800823AF8 /* HomeViewController.swift in Sources */,
 				07E5254524E5A9CB00823AF8 /* MapCoordinator.swift in Sources */,
 				07E5252F24E521F800823AF8 /* Secrets.swift in Sources */,
+				07684CBC24E618830090EE74 /* HomeViewController+CollectionView.swift in Sources */,
 				07684CB024E5D9A60090EE74 /* UIImageView+Extensions.swift in Sources */,
 				07E5255024E5B65500823AF8 /* CafeModel.swift in Sources */,
 				07E5254324E5A94000823AF8 /* HomeViewModel.swift in Sources */,
 				07684CB624E5F8E10090EE74 /* HomeHeaderCollectionReusableView.swift in Sources */,
+				07684CBA24E6184C0090EE74 /* HomeViewController+CLLocation.swift in Sources */,
 				07E5253724E532EF00823AF8 /* Coordinator.swift in Sources */,
 				07E5254124E5A81200823AF8 /* MapViewController.swift in Sources */,
 				07E5253D24E5335500823AF8 /* UIViewController+Extensions.swift in Sources */,
