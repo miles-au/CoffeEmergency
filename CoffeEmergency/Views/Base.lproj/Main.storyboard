@@ -41,6 +41,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbI-Iv-Rxj">
+                                <rect key="frame" x="107" y="767" width="200" height="75"/>
+                                <color key="backgroundColor" name="BrandBeige"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="GLT-Sp-hlK"/>
+                                    <constraint firstAttribute="height" constant="75" id="wVE-Gf-fKc"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="toMapButtonPressed:" destination="fF8-JF-eo1" eventType="touchUpInside" id="GGM-Mf-tgd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="BrandBackgroundBrown"/>
                         <constraints>
@@ -49,11 +60,13 @@
                             <constraint firstAttribute="bottom" secondItem="ZOx-0A-0Wo" secondAttribute="bottom" id="JDA-qg-xL7"/>
                             <constraint firstItem="Oug-2o-anE" firstAttribute="trailing" secondItem="hdO-2C-C0Q" secondAttribute="trailing" constant="20" id="Mm3-9L-dTg"/>
                             <constraint firstItem="hdO-2C-C0Q" firstAttribute="centerY" secondItem="Jt6-ya-ciT" secondAttribute="centerY" id="ODK-KX-bWu"/>
+                            <constraint firstItem="SbI-Iv-Rxj" firstAttribute="centerX" secondItem="Jt6-ya-ciT" secondAttribute="centerX" id="VGR-5u-zOU"/>
                             <constraint firstItem="hdO-2C-C0Q" firstAttribute="centerX" secondItem="Jt6-ya-ciT" secondAttribute="centerX" id="WAX-lR-QtI"/>
                             <constraint firstAttribute="bottom" secondItem="wNy-EI-Pun" secondAttribute="bottom" id="YbR-gx-26c"/>
                             <constraint firstAttribute="trailing" secondItem="ZOx-0A-0Wo" secondAttribute="trailing" id="YmT-eM-i6X"/>
                             <constraint firstItem="wNy-EI-Pun" firstAttribute="top" secondItem="Oug-2o-anE" secondAttribute="top" constant="5" id="fbX-3z-8kM"/>
                             <constraint firstItem="wNy-EI-Pun" firstAttribute="leading" secondItem="Oug-2o-anE" secondAttribute="leading" constant="5" id="h6q-0D-4ve"/>
+                            <constraint firstItem="Oug-2o-anE" firstAttribute="bottom" secondItem="SbI-Iv-Rxj" secondAttribute="bottom" constant="20" id="o8W-fY-pIg"/>
                             <constraint firstItem="Oug-2o-anE" firstAttribute="trailing" secondItem="wNy-EI-Pun" secondAttribute="trailing" constant="5" id="t21-Lq-nfJ"/>
                             <constraint firstItem="ZOx-0A-0Wo" firstAttribute="leading" secondItem="Jt6-ya-ciT" secondAttribute="leading" id="tky-ZN-cbb"/>
                         </constraints>
@@ -63,6 +76,7 @@
                         <outlet property="FetchStatusLabel" destination="os7-NP-ReK" id="r0P-QU-guR"/>
                         <outlet property="FetchStatusStackView" destination="hdO-2C-C0Q" id="mfI-zd-5pq"/>
                         <outlet property="collectionView" destination="wNy-EI-Pun" id="1xa-3z-3nY"/>
+                        <outlet property="toMapButton" destination="SbI-Iv-Rxj" id="kRb-4c-GOg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SwI-p7-hsd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

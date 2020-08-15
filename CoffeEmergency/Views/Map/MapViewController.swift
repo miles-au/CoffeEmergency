@@ -50,7 +50,7 @@ class MapViewController: UIViewController {
         if let latitude = selectedCafe?.latitude, let longitude = selectedCafe?.longitude{
             zoomMap(to: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), animated: false)
         }else{
-            zoomMap(to: CLLocationCoordinate2D(), animated: false)
+            zoomMap(to: mapView.userLocation.coordinate, animated: false, distance: 1000)
         }
         
         setUpCafeInfoView()
@@ -61,8 +61,8 @@ class MapViewController: UIViewController {
         viewModel?.viewDidFinish()
     }
     
-    func zoomMap(to coordinates: CLLocationCoordinate2D, animated: Bool){
-        let viewRegion = MKCoordinateRegion(center: coordinates, latitudinalMeters: 200, longitudinalMeters: 200)
+    func zoomMap(to coordinates: CLLocationCoordinate2D, animated: Bool, distance: Double = 200){
+        let viewRegion = MKCoordinateRegion(center: coordinates, latitudinalMeters: distance, longitudinalMeters: distance)
         mapView.setRegion(viewRegion, animated: animated)
     }
     
