@@ -17,10 +17,11 @@ class CafeCollectionViewCell: UICollectionViewCell {
     var cafe: CafeModel!
     
     @IBOutlet weak var coverPhotoImageView: UIImageView!
+    @IBOutlet weak var cafeName: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var cafeName: UILabel!
+    @IBOutlet weak var showOnMapButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,7 +33,7 @@ class CafeCollectionViewCell: UICollectionViewCell {
         // set cafe
         self.cafe = cafe
         
-        // set ui properties
+        // set up ui
         cafeName.text = cafe.name
         coverPhotoImageView.downloaded(from: cafe.imageURL)
         distanceLabel.text = "📐 \(StringUtils.toSingleDecimal(cafe.distance))m"
@@ -41,6 +42,13 @@ class CafeCollectionViewCell: UICollectionViewCell {
         }else{
             priceLabel.isHidden = true
         }
+        showOnMapButton.layer.cornerRadius = 10
+        
+        // border
+        layer.cornerRadius = 10
+        layer.borderWidth = 2.5
+        layer.borderColor = UIColor(named: "BrandLightBrown")?.cgColor
+        
         ratingLabel.text = "⭐️ \(cafe.rating)"
     }
     

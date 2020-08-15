@@ -20,6 +20,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var cafeInfoViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var cafeInfoLabel: UILabel!
     @IBOutlet weak var cafeInfoImageView: UIImageView!
+    @IBOutlet weak var toRouteButton: UIButton!
     let cafeInfoViewHeight = CGFloat(250)
     var cafeInfoViewIsActive = false
     
@@ -82,6 +83,9 @@ class MapViewController: UIViewController {
     
     func setUpCafeInfoView(){
         cafeInfoView.layer.cornerRadius = 10
+        cafeInfoView.layer.borderWidth = 2.5
+        cafeInfoView.layer.borderColor = UIColor(named: "BrandLightBrown")?.cgColor
+        toRouteButton.layer.cornerRadius = 10
         cafeInfoView.translatesAutoresizingMaskIntoConstraints = false
         
         // top constraint

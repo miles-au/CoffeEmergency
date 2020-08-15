@@ -145,6 +145,7 @@
                         <outlet property="cafeInfoViewVerticalConstraint" destination="RFP-q6-zZD" id="6ym-sr-4n2"/>
                         <outlet property="cafeInfoViewWidthConstraint" destination="cKo-jz-8bv" id="ppD-B3-nNV"/>
                         <outlet property="mapView" destination="jqW-jU-w3n" id="hdO-oJ-U62"/>
+                        <outlet property="toRouteButton" destination="Lyc-YX-7RD" id="Hmg-Ci-SXw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ee-gW-ouV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

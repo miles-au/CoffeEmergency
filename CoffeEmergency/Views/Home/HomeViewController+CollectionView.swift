@@ -23,8 +23,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var numberOfColumns = 1
-        let width = view.frame.size.width - 10
-        let height = view.frame.size.height - 10
+        let width = UIScreen.main.bounds.width
+        let height = UIScreen.main.bounds.height
         let aspectRatio = CGFloat(0.75) // Width / Height
         
         if width > height{
@@ -35,7 +35,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
             numberOfColumns = width < 415 ? 1 : 2
         }
         
-        let cellSize = width / CGFloat(numberOfColumns)
+        let cellSize = width / CGFloat(numberOfColumns) - 10
         
         return CGSize(width: cellSize, height: cellSize * aspectRatio)
     }

@@ -31,6 +31,18 @@ class HomeViewController: UIViewController {
         locationManager.requestLocation()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        // on orientation change, layout collection view again to update cell sizes
+        coordinator.animate(
+            alongsideTransition: { _ in
+                self.collectionView.collectionViewLayout.invalidateLayout()
+        },
+            completion: nil
+        )
+    }
+    
     func changeStatusLabel(text: String){
         FetchStatusLabel.text = text
     }

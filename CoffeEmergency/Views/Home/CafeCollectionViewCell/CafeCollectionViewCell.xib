@@ -21,10 +21,10 @@
                         <rect key="frame" x="2.5" y="2.5" width="243" height="181"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vkf-Hn-bcC">
-                                <rect key="frame" x="0.0" y="0.0" width="243" height="65.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="243" height="75.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bd-eo-o2j">
-                                <rect key="frame" x="0.0" y="125" width="243" height="41"/>
+                                <rect key="frame" x="5" y="135" width="233" height="41"/>
                                 <color key="backgroundColor" name="BrandGreen"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <color key="tintColor" name="BrandBeige"/>
@@ -38,13 +38,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local Cafe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toD-4j-4M0">
-                                <rect key="frame" x="0.0" y="70.5" width="243" height="23.5"/>
+                                <rect key="frame" x="10" y="80.5" width="223" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
                                 <color key="textColor" name="BrandLightBrown"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yNv-Ms-9Yg">
-                                <rect key="frame" x="0.0" y="99" width="243" height="21"/>
+                                <rect key="frame" x="0.0" y="109" width="243" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📐 10 m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGu-oE-Pza">
                                         <rect key="frame" x="0.0" y="0.0" width="81" height="21"/>
@@ -72,16 +72,16 @@
                             <constraint firstItem="toD-4j-4M0" firstAttribute="top" secondItem="Vkf-Hn-bcC" secondAttribute="bottom" constant="5" id="0ie-vT-cGg"/>
                             <constraint firstItem="yNv-Ms-9Yg" firstAttribute="leading" secondItem="QES-vr-ucw" secondAttribute="leading" id="6BG-uH-fHG"/>
                             <constraint firstItem="Vkf-Hn-bcC" firstAttribute="top" secondItem="QES-vr-ucw" secondAttribute="top" id="CJo-eg-g1i"/>
-                            <constraint firstItem="8Bd-eo-o2j" firstAttribute="leading" secondItem="QES-vr-ucw" secondAttribute="leading" id="Cew-RM-vWF"/>
+                            <constraint firstItem="8Bd-eo-o2j" firstAttribute="leading" secondItem="QES-vr-ucw" secondAttribute="leading" constant="5" id="Cew-RM-vWF"/>
                             <constraint firstAttribute="trailing" secondItem="Vkf-Hn-bcC" secondAttribute="trailing" id="F5M-E6-NvS"/>
-                            <constraint firstItem="toD-4j-4M0" firstAttribute="leading" secondItem="QES-vr-ucw" secondAttribute="leading" id="G2E-i3-JHr"/>
+                            <constraint firstItem="toD-4j-4M0" firstAttribute="leading" secondItem="QES-vr-ucw" secondAttribute="leading" constant="10" id="G2E-i3-JHr"/>
                             <constraint firstItem="yNv-Ms-9Yg" firstAttribute="top" secondItem="toD-4j-4M0" secondAttribute="bottom" constant="5" id="JSq-Iw-YpJ"/>
-                            <constraint firstAttribute="bottom" secondItem="8Bd-eo-o2j" secondAttribute="bottom" constant="15" id="Nzc-Nl-SLE"/>
+                            <constraint firstAttribute="bottom" secondItem="8Bd-eo-o2j" secondAttribute="bottom" constant="5" id="Nzc-Nl-SLE"/>
                             <constraint firstItem="8Bd-eo-o2j" firstAttribute="top" secondItem="yNv-Ms-9Yg" secondAttribute="bottom" constant="5" id="OjU-32-H7Y"/>
-                            <constraint firstAttribute="trailing" secondItem="toD-4j-4M0" secondAttribute="trailing" id="UZY-ZU-BmC"/>
+                            <constraint firstAttribute="trailing" secondItem="toD-4j-4M0" secondAttribute="trailing" constant="10" id="UZY-ZU-BmC"/>
                             <constraint firstItem="Vkf-Hn-bcC" firstAttribute="leading" secondItem="QES-vr-ucw" secondAttribute="leading" id="pqq-8t-l9j"/>
                             <constraint firstAttribute="trailing" secondItem="yNv-Ms-9Yg" secondAttribute="trailing" id="tUi-XE-5Jm"/>
-                            <constraint firstAttribute="trailing" secondItem="8Bd-eo-o2j" secondAttribute="trailing" id="vo2-1v-lGr"/>
+                            <constraint firstAttribute="trailing" secondItem="8Bd-eo-o2j" secondAttribute="trailing" constant="5" id="vo2-1v-lGr"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -100,6 +100,7 @@
                 <outlet property="distanceLabel" destination="BGu-oE-Pza" id="HPV-Uf-jwY"/>
                 <outlet property="priceLabel" destination="MA2-xf-gaT" id="7tB-Bi-QZW"/>
                 <outlet property="ratingLabel" destination="tc6-73-c3m" id="RNm-df-HOw"/>
+                <outlet property="showOnMapButton" destination="8Bd-eo-o2j" id="sUp-2w-2rK"/>
             </connections>
             <point key="canvasLocation" x="281.15942028985512" y="153.34821428571428"/>
         </collectionViewCell>
