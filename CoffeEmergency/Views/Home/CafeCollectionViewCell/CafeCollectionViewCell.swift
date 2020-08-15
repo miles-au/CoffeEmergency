@@ -35,7 +35,7 @@ class CafeCollectionViewCell: UICollectionViewCell {
         // set ui properties
         cafeName.text = cafe.name
         coverPhotoImageView.downloaded(from: cafe.imageURL)
-        distanceLabel.text = "📐 \(Double(round(10 * cafe.distance)/1000))m"
+        distanceLabel.text = "📐 \(StringUtils.toSingleDecimal(cafe.distance))m"
         if let priceText = cafe.price{
             priceLabel.text = "🏷 \(priceText)"
         }else{

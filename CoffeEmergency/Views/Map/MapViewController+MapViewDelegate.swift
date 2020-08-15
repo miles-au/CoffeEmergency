@@ -31,18 +31,10 @@ extension MapViewController: MKMapViewDelegate{
         // dequeue a custom CafeAnnotation
         var view: CafeAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: "CafeAnnotationView") as? CafeAnnotationView
         if view == nil {
-            // if we don't have a custom annotation, create a new one
+            // if we can't dequeue a custom annotation, create a new one
             view = CafeAnnotationView(annotation: annotation, reuseIdentifier: "CafeAnnotationView")
         }
-
-        // setup CafeAnnotation
-        if let annotation = annotation as? CafeAnnotation, let imageUrl = URL(string: annotation.cafe.imageURL){
-            UIImage.downloaded(from: imageUrl) { image in
-                DispatchQueue.main.async {
-                    view?.image = image
-                }
-            }
-        }
+        
         view?.annotation = annotation
 
         return view
@@ -52,11 +44,13 @@ extension MapViewController: MKMapViewDelegate{
         if let cafeAnnotation = view.annotation as? CafeAnnotation{
             selectedCafe = cafeAnnotation.cafe
             zoomMap(to: cafeAnnotation.coordinate)
+            showCafeInfoView()
         }
     }
     
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         selectedCafe = nil
+        hideCafeInfoView()
     }
 }
 

@@ -80,17 +80,70 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jqW-jU-w3n">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9eL-W1-Ykl">
+                                <rect key="frame" x="7" y="626" width="400" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="weu-uf-Iqc">
+                                        <rect key="frame" x="10" y="10" width="380" height="230"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name of the Cafe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQE-en-QfU">
+                                                <rect key="frame" x="0.0" y="0.0" width="380" height="29"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                                <color key="textColor" name="BrandLightBrown"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgO-RO-Hhh">
+                                                <rect key="frame" x="0.0" y="52" width="380" height="113"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyc-YX-7RD">
+                                                <rect key="frame" x="0.0" y="188" width="380" height="42"/>
+                                                <color key="backgroundColor" name="BrandGreen"/>
+                                                <color key="tintColor" name="BrandBeige"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Route" image="map.fill" catalog="system">
+                                                    <color key="titleColor" name="BrandBeige"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Lyc-YX-7RD" firstAttribute="leading" secondItem="weu-uf-Iqc" secondAttribute="leading" id="SLj-km-Jga"/>
+                                            <constraint firstAttribute="trailing" secondItem="bQE-en-QfU" secondAttribute="trailing" id="ZIW-Dz-JgP"/>
+                                            <constraint firstAttribute="trailing" secondItem="JgO-RO-Hhh" secondAttribute="trailing" id="bdU-g8-9tS"/>
+                                            <constraint firstItem="bQE-en-QfU" firstAttribute="leading" secondItem="weu-uf-Iqc" secondAttribute="leading" id="frt-NE-yC2"/>
+                                            <constraint firstItem="JgO-RO-Hhh" firstAttribute="leading" secondItem="weu-uf-Iqc" secondAttribute="leading" id="ifA-cB-6nN"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lyc-YX-7RD" secondAttribute="trailing" id="moP-lS-1qy"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandBeige"/>
+                                <constraints>
+                                    <constraint firstItem="weu-uf-Iqc" firstAttribute="top" secondItem="9eL-W1-Ykl" secondAttribute="top" constant="10" id="B3o-BW-whp"/>
+                                    <constraint firstAttribute="height" constant="250" id="Iut-hS-LLA"/>
+                                    <constraint firstItem="weu-uf-Iqc" firstAttribute="leading" secondItem="9eL-W1-Ykl" secondAttribute="leading" constant="10" id="TGZ-Br-reX"/>
+                                    <constraint firstAttribute="trailing" secondItem="weu-uf-Iqc" secondAttribute="trailing" constant="10" id="X8U-Br-zGr"/>
+                                    <constraint firstAttribute="width" constant="400" id="cKo-jz-8bv"/>
+                                    <constraint firstAttribute="bottom" secondItem="weu-uf-Iqc" secondAttribute="bottom" constant="10" id="zLd-Bn-2Ce"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="BrandBackgroundBrown"/>
                         <constraints>
+                            <constraint firstItem="9eL-W1-Ykl" firstAttribute="centerX" secondItem="l9O-P2-lIN" secondAttribute="centerX" id="8T4-9h-Fnj"/>
                             <constraint firstItem="IcO-Ms-ZeB" firstAttribute="trailing" secondItem="jqW-jU-w3n" secondAttribute="trailing" id="ChD-ph-jKc"/>
                             <constraint firstItem="jqW-jU-w3n" firstAttribute="top" secondItem="l9O-P2-lIN" secondAttribute="top" id="GhN-sc-FUe"/>
+                            <constraint firstAttribute="bottom" secondItem="9eL-W1-Ykl" secondAttribute="bottom" constant="20" id="RFP-q6-zZD"/>
                             <constraint firstItem="jqW-jU-w3n" firstAttribute="leading" secondItem="IcO-Ms-ZeB" secondAttribute="leading" id="m10-bR-oBN"/>
                             <constraint firstAttribute="bottom" secondItem="jqW-jU-w3n" secondAttribute="bottom" id="zAi-Pr-CUA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IcO-Ms-ZeB"/>
                     </view>
                     <connections>
+                        <outlet property="cafeInfoImageView" destination="JgO-RO-Hhh" id="jVi-UZ-DRm"/>
+                        <outlet property="cafeInfoLabel" destination="bQE-en-QfU" id="HPE-cT-gIB"/>
+                        <outlet property="cafeInfoView" destination="9eL-W1-Ykl" id="3bx-T7-si5"/>
+                        <outlet property="cafeInfoViewVerticalConstraint" destination="RFP-q6-zZD" id="6ym-sr-4n2"/>
+                        <outlet property="cafeInfoViewWidthConstraint" destination="cKo-jz-8bv" id="ppD-B3-nNV"/>
                         <outlet property="mapView" destination="jqW-jU-w3n" id="hdO-oJ-U62"/>
                     </connections>
                 </viewController>
@@ -101,11 +154,21 @@
     </scenes>
     <resources>
         <image name="DusseldorfMap" width="2656" height="1370"/>
+        <image name="map.fill" catalog="system" width="128" height="113"/>
         <namedColor name="BrandBackgroundBrown">
+            <color red="0.96899998188018799" green="0.94900000095367432" blue="0.875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandBeige">
             <color red="0.96899998188018799" green="0.94900000095367432" blue="0.875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandBodyTextBrown">
             <color red="0.2669999897480011" green="0.21199999749660492" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandGreen">
+            <color red="0.37599998712539673" green="0.6470000147819519" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandLightBrown">
+            <color red="0.44699999690055847" green="0.36899998784065247" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

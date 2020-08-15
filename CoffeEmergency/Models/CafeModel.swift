@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CafeModel{
+struct CafeModel: Equatable{
     let name: String
     let imageURL: String
     let yelpURL: String
