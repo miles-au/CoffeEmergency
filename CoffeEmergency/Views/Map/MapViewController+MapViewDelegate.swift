@@ -43,7 +43,7 @@ extension MapViewController: MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let cafeAnnotation = view.annotation as? CafeAnnotation{
             selectedCafe = cafeAnnotation.cafe
-            zoomMap(to: cafeAnnotation.coordinate)
+            zoomMap(to: cafeAnnotation.coordinate, animated: true)
             showCafeInfoView()
         }
     }

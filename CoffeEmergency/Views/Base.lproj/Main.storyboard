@@ -104,6 +104,9 @@
                                                 <state key="normal" title="Route" image="map.fill" catalog="system">
                                                     <color key="titleColor" name="BrandBeige"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="toRouteButtonPressed:" destination="JiX-uR-uje" eventType="touchUpInside" id="HzH-R1-SuW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

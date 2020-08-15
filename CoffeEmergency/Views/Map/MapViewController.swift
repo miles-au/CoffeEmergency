@@ -39,15 +39,18 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // setup map view - on map view loaded is in the delegate
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.mapType = .mutedStandard
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         // set region to selected cafe location if exists
         if let latitude = selectedCafe?.latitude, let longitude = selectedCafe?.longitude{
-            zoomMap(to: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+            zoomMap(to: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), animated: false)
         }else{
-            zoomMap(to: CLLocationCoordinate2D())
+            zoomMap(to: CLLocationCoordinate2D(), animated: false)
         }
         
         setUpCafeInfoView()
@@ -58,9 +61,9 @@ class MapViewController: UIViewController {
         viewModel?.viewDidFinish()
     }
     
-    func zoomMap(to coordinates: CLLocationCoordinate2D){
+    func zoomMap(to coordinates: CLLocationCoordinate2D, animated: Bool){
         let viewRegion = MKCoordinateRegion(center: coordinates, latitudinalMeters: 200, longitudinalMeters: 200)
-        mapView.setRegion(viewRegion, animated: true)
+        mapView.setRegion(viewRegion, animated: animated)
     }
     
     func loadCafes(){
@@ -120,6 +123,26 @@ class MapViewController: UIViewController {
         UIView.animate(withDuration: 0.25) {
             self.view.layoutIfNeeded()
         }
+    }
+    
+    @IBAction func toRouteButtonPressed(_ sender: UIButton) {
+        guard let cafe = selectedCafe else { return }
+        
+        // settings for launching in apple maps
+        let regionDistance: CLLocationDistance = cafe.distance * 4
+        let coordinates = CLLocationCoordinate2D(latitude: cafe.latitude, longitude: cafe.longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        
+        // create placemark for cafe
+        let cafePlacemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: cafePlacemark)
+        mapItem.name = cafe.name
+
+        MKMapItem.openMaps(with: [mapItem], launchOptions: options)
     }
 }
 

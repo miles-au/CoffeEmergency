@@ -67,7 +67,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="BrandBackgroundBrown"/>
                         <constraints>
                             <constraint firstItem="toD-4j-4M0" firstAttribute="top" secondItem="Vkf-Hn-bcC" secondAttribute="bottom" constant="5" id="0ie-vT-cGg"/>
                             <constraint firstItem="yNv-Ms-9Yg" firstAttribute="leading" secondItem="QES-vr-ucw" secondAttribute="leading" id="6BG-uH-fHG"/>
@@ -107,6 +107,9 @@
     </objects>
     <resources>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <namedColor name="BrandBackgroundBrown">
+            <color red="0.96899998188018799" green="0.94900000095367432" blue="0.875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BrandBeige">
             <color red="0.96899998188018799" green="0.94900000095367432" blue="0.875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
