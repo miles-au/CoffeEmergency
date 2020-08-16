@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreLocation
 
 class HomeViewController: UIViewController {
     
@@ -18,18 +17,11 @@ class HomeViewController: UIViewController {
     
     var viewModel: HomeViewModel!
     
-    let locationManager = CLLocationManager()
-    var currentLocation: CLLocation?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewSetup()
         
         viewModel.viewDelegate = self
-        
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
