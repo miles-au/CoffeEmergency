@@ -47,7 +47,7 @@ class CafeCollectionViewCell: UICollectionViewCell {
         // border
         layer.cornerRadius = 10
         layer.borderWidth = 2.5
-        layer.borderColor = UIColor(named: "BrandLightBrown")?.cgColor
+        layer.borderColor = UIColor(named: "BrandBackgroundBrown")?.cgColor
         
         ratingLabel.text = "⭐️ \(cafe.rating)"
     }
