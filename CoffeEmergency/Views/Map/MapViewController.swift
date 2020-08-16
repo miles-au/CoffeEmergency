@@ -24,17 +24,7 @@ class MapViewController: UIViewController {
     let cafeInfoViewHeight = CGFloat(250)
     var cafeInfoViewIsActive = false
     
-    var viewModel: MapViewModel? {
-        willSet {
-            viewModel?.viewDelegate = nil
-        }
-        didSet {
-            viewModel?.viewDelegate = self
-        }
-    }
-    
-    var selectedCafe: CafeModel?
-    var cafes = [CafeModel]()
+    var viewModel: MapViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +37,7 @@ class MapViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         // set region to selected cafe location if exists
-        if let latitude = selectedCafe?.latitude, let longitude = selectedCafe?.longitude{
+        if let latitude = viewModel?.selectedCafe?.latitude, let longitude = viewModel?.selectedCafe?.longitude{
             zoomMap(to: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), animated: false)
         }else{
             zoomMap(to: mapView.userLocation.coordinate, animated: false, distance: 1000)
@@ -67,17 +57,25 @@ class MapViewController: UIViewController {
     }
     
     func loadCafes(){
+        guard let cafes = viewModel?.cafes else { return }
+        
+        // setup annotations
         var selectedAnnotation: CafeAnnotation?
         var annotations = [CafeAnnotation]()
+        
+        // loop through cafes
         for cafe in cafes{
             let annotation = CafeAnnotation(cafe: cafe)
-            if cafe == selectedCafe{
+            if cafe == viewModel?.selectedCafe{
                 selectedAnnotation = annotation
             }
             annotations.append(annotation)
         }
+        
+        // add annotations to map view
         mapView.addAnnotations(annotations)
         
+        // if a cafe has been selected, select it's annotation and zoom to it
         if selectedAnnotation != nil{
             mapView.selectAnnotation(selectedAnnotation!, animated: true)
             showCafeInfoView()
@@ -101,7 +99,7 @@ class MapViewController: UIViewController {
     
     func showCafeInfoView(){
         // check to make sure a cafe has been selected
-        guard let cafe = selectedCafe else { return }
+        guard let cafe = viewModel?.selectedCafe else { return }
         
         // update cafeInfoView information
         cafeInfoViewIsActive = true
@@ -126,27 +124,6 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func toRouteButtonPressed(_ sender: UIButton) {
-        guard let cafe = selectedCafe else { return }
-        
-        // settings for launching in apple maps
-        let regionDistance: CLLocationDistance = cafe.distance * 4
-        let coordinates = CLLocationCoordinate2D(latitude: cafe.latitude, longitude: cafe.longitude)
-        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
-        let options = [
-            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
-        ]
-        
-        // create placemark for cafe
-        let cafePlacemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-        let mapItem = MKMapItem(placemark: cafePlacemark)
-        mapItem.name = cafe.name
-
-        MKMapItem.openMaps(with: [mapItem], launchOptions: options)
+        viewModel?.openLocationInMap()
     }
-}
-
-// MARK: - Receive updates from Map View Model
-extension MapViewController: MapViewModelViewDelegate{
-    
 }

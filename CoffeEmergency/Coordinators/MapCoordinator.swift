@@ -29,13 +29,14 @@ class MapCoordinator: Coordinator{
     func start() {
         // create view controller
         let mapViewController: MapViewController = .instantiate()
-        mapViewController.selectedCafe = selectedCafe
-        mapViewController.cafes = cafes
         
         // create view model
         let mapViewModel = MapViewModel()
         mapViewModel.coordinator = self
         mapViewController.viewModel = mapViewModel
+        
+        mapViewController.viewModel?.selectedCafe = selectedCafe
+        mapViewController.viewModel?.cafes = cafes
         
         // push view controller
         navigationController.pushViewController(mapViewController, animated: true)

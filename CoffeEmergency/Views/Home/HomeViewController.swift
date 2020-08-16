@@ -30,8 +30,6 @@ class HomeViewController: UIViewController {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-        
-//        setupToMapButton()
     }
     
     override func viewDidAppear(_ animated: Bool) {

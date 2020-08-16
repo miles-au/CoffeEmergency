@@ -42,14 +42,14 @@ extension MapViewController: MKMapViewDelegate{
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let cafeAnnotation = view.annotation as? CafeAnnotation{
-            selectedCafe = cafeAnnotation.cafe
+            viewModel?.selectedCafe = cafeAnnotation.cafe
             zoomMap(to: cafeAnnotation.coordinate)
             showCafeInfoView()
         }
     }
     
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        selectedCafe = nil
+        viewModel?.selectedCafe = nil
         hideCafeInfoView()
     }
 }

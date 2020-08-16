@@ -7,15 +7,35 @@
 //
 
 import Foundation
-
-protocol MapViewModelViewDelegate: class{
-}
+import MapKit
 
 class MapViewModel{
     var coordinator: MapCoordinator?
-    var viewDelegate: MapViewModelViewDelegate?
+    
+    var selectedCafe: CafeModel?
+    var cafes = [CafeModel]()
     
     func viewDidFinish() {
         coordinator?.didFinish()
+    }
+    
+    func openLocationInMap(){
+        guard let cafe = selectedCafe else { return }
+        
+        // settings for launching in apple maps
+        let regionDistance: CLLocationDistance = cafe.distance * 4
+        let coordinates = CLLocationCoordinate2D(latitude: cafe.latitude, longitude: cafe.longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        
+        // create placemark for cafe
+        let cafePlacemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: cafePlacemark)
+        mapItem.name = cafe.name
+
+        MKMapItem.openMaps(with: [mapItem], launchOptions: options)
     }
 }
