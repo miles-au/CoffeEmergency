@@ -75,6 +75,8 @@
 		07C71CB924E710BD00E96B4E /* CafeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeAnnotation.swift; sourceTree = "<group>"; };
 		07C71CBB24E7153E00E96B4E /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		07C71CBE24E74AF500E96B4E /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		07DDBB0A24EAFB0B00818078 /* phone_map.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_map.PNG; sourceTree = "<group>"; };
+		07DDBB0B24EAFB0C00818078 /* phone_home.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_home.PNG; sourceTree = "<group>"; };
 		07E524FB24E521E800823AF8 /* CoffeEmergency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeEmergency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E524FE24E521E800823AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07E5250024E521E800823AF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,9 +176,19 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		07DDBB0924EAFAF600818078 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				07DDBB0B24EAFB0C00818078 /* phone_home.PNG */,
+				07DDBB0A24EAFB0B00818078 /* phone_map.PNG */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		07E524F224E521E800823AF8 = {
 			isa = PBXGroup;
 			children = (
+				07DDBB0924EAFAF600818078 /* Screenshots */,
 				07E524FD24E521E800823AF8 /* CoffeEmergency */,
 				07E5251424E521EA00823AF8 /* CoffeEmergencyTests */,
 				07E5251F24E521EA00823AF8 /* CoffeEmergencyUITests */,
