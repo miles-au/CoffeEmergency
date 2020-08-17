@@ -77,6 +77,7 @@
 		07C71CBE24E74AF500E96B4E /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		07DDBB0A24EAFB0B00818078 /* phone_map.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_map.PNG; sourceTree = "<group>"; };
 		07DDBB0B24EAFB0C00818078 /* phone_home.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_home.PNG; sourceTree = "<group>"; };
+		07DDBB0C24EAFCBD00818078 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		07E524FB24E521E800823AF8 /* CoffeEmergency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeEmergency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E524FE24E521E800823AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07E5250024E521E800823AF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +189,7 @@
 		07E524F224E521E800823AF8 = {
 			isa = PBXGroup;
 			children = (
+				07DDBB0C24EAFCBD00818078 /* README.md */,
 				07DDBB0924EAFAF600818078 /* Screenshots */,
 				07E524FD24E521E800823AF8 /* CoffeEmergency */,
 				07E5251424E521EA00823AF8 /* CoffeEmergencyTests */,
