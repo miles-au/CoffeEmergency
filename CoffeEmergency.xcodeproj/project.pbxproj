@@ -206,7 +206,6 @@
 				07E524FE24E521E800823AF8 /* AppDelegate.swift */,
 				07E5250024E521E800823AF8 /* SceneDelegate.swift */,
 				07E5250724E521EA00823AF8 /* Assets.xcassets */,
-				07E5250924E521EA00823AF8 /* LaunchScreen.storyboard */,
 				07E5250C24E521EA00823AF8 /* Info.plist */,
 				07E5252E24E521F800823AF8 /* Secrets.swift */,
 			);
@@ -257,6 +256,7 @@
 		07E5253424E5254600823AF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				07E5250924E521EA00823AF8 /* LaunchScreen.storyboard */,
 				07E5250424E521E800823AF8 /* Main.storyboard */,
 				07684CB124E5F6ED0090EE74 /* Home */,
 				07684CBD24E620090090EE74 /* Map */,

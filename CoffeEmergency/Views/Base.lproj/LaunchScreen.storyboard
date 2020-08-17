@@ -19,12 +19,19 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DusseldorfMap" translatesAutoresizingMaskIntoConstraints="NO" id="xsF-Bd-rcx">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_transparent" translatesAutoresizingMaskIntoConstraints="NO" id="RK8-J9-CCF">
+                                <rect key="frame" x="103.5" y="277.5" width="207" height="341"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="BrandBackgroundBrown"/>
                         <constraints>
                             <constraint firstItem="xsF-Bd-rcx" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="2l2-bS-rAb"/>
+                            <constraint firstItem="RK8-J9-CCF" firstAttribute="height" relation="lessThanOrEqual" secondItem="xsF-Bd-rcx" secondAttribute="height" multiplier="0.5" id="I3S-xR-k6d"/>
+                            <constraint firstItem="RK8-J9-CCF" firstAttribute="width" relation="lessThanOrEqual" secondItem="xsF-Bd-rcx" secondAttribute="width" multiplier="0.5" id="Mhx-CY-dLb"/>
                             <constraint firstItem="xsF-Bd-rcx" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Ora-Rb-ibE"/>
+                            <constraint firstItem="RK8-J9-CCF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="TaC-XN-hdR"/>
                             <constraint firstItem="xsF-Bd-rcx" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="g8b-UE-kEv"/>
+                            <constraint firstItem="RK8-J9-CCF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mVe-zG-2pr"/>
                             <constraint firstAttribute="bottom" secondItem="xsF-Bd-rcx" secondAttribute="bottom" id="tft-bS-blp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -37,6 +44,7 @@
     </scenes>
     <resources>
         <image name="DusseldorfMap" width="2656" height="1370"/>
+        <image name="logo_transparent" width="341.5" height="341"/>
         <namedColor name="BrandBackgroundBrown">
             <color red="0.96899998188018799" green="0.94900000095367432" blue="0.875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

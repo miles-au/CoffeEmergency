@@ -183,7 +183,7 @@
             <color red="0.2669999897480011" green="0.21199999749660492" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandGreen">
-            <color red="0.37599998712539673" green="0.6470000147819519" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.37647058823529411" green="0.6470588235294118" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandLightBrown">
             <color red="0.44699999690055847" green="0.36899998784065247" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

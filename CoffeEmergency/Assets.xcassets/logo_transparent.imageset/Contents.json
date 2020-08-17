@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "coffeePin.png",
+      "filename" : "logo_transparent.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "coffeePin@2x.png",
+      "filename" : "logo_transparent@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "coffeePin@3x.png",
+      "filename" : "logo_transparent@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
