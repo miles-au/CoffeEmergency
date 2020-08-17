@@ -4,8 +4,10 @@
 
 ### [Check out the showcase/demo video here.](https://www.youtube.com/watch?v=KoTOxgK__Ug&list=PLUQm-VQnY5s3NSJ9fbZ7EEKgkBDZSwEZO&index=2&t=0s)
 
-![home_screenshot](https://raw.githubusercontent.com/miles-au/CoffeEmergency/master/Screenshots/phone_home.PNG =250x)
-![map_screenshot](https://raw.githubusercontent.com/miles-au/CoffeEmergency/master/Screenshots/phone_map.PNG =250x)
+|
+<img src="https://raw.githubusercontent.com/miles-au/CoffeEmergency/master/Screenshots/phone_home.PNG" width="250px" />
+|
+<img src="https://raw.githubusercontent.com/miles-au/CoffeEmergency/master/Screenshots/phone_map.PNG" width="250px" />
 
 ### Connect with me, or check out my other stuff!
 -  [Apps Youtube Playlist](https://www.youtube.com/playlist?list=PLUQm-VQnY5s3NSJ9fbZ7EEKgkBDZSwEZO)
