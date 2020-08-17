@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
         collectionViewSetup()
         
         viewModel.viewDelegate = self
+        viewModel.getUserLocation()
     }
     
     override func viewDidAppear(_ animated: Bool) {

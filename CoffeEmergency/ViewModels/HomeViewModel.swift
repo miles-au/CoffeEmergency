@@ -28,10 +28,13 @@ class HomeViewModel: NSObject, CafeManagerDelegate{
         super.init()
         
         locationManager.delegate = self
+        cafeManager.delegate = self
+    }
+    
+    /// Start process to get user's location
+    func getUserLocation(){
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-        
-        cafeManager.delegate = self
     }
     
     /// Navigate to Map page to display businesses in map view
@@ -41,8 +44,10 @@ class HomeViewModel: NSObject, CafeManagerDelegate{
     
     /// send request to Model to fetch cafes
     func fetchCafes(at latitude: Double, and longitude: Double){
-        cafeManager.fetchCafes(at: latitude, and: longitude)
-//        didFetchCafes(with: .success(CafeModel.tempData))
+        // Currently bypassing api fetch with temporary data
+        // Please send me an email at miles.d.au@gmail.com for my Yelp Api Key
+        // cafeManager.fetchCafes(at: latitude, and: longitude)
+        didFetchCafes(with: .success(CafeModel.tempData))
     }
     
     /// receive resuilt from request to cafes

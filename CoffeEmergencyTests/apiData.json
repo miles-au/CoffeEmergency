@@ -1,0 +1,242 @@
+{
+    "businesses": [
+        {
+            "id": "uXIgHqwjy5Je8fqxQmnrAw",
+            "alias": "raretea-cupertino",
+            "name": "RareTea",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/0MAo_RGCdsF9xqJ7StrHHg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/raretea-cupertino?adjust_creative=FWsxiO82XGlqf4jtJ9eo0g&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=FWsxiO82XGlqf4jtJ9eo0g",
+            "review_count": 72,
+            "categories": [
+                {
+                    "alias": "bubbletea",
+                    "title": "Bubble Tea"
+                },
+                {
+                    "alias": "coffee",
+                    "title": "Coffee & Tea"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 37.336968,
+                "longitude": -122.0402513
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$",
+            "location": {
+                "address1": "20956 Homestead Rd",
+                "address2": "Ste D",
+                "address3": "",
+                "city": "Cupertino",
+                "zip_code": "95014",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "20956 Homestead Rd",
+                    "Ste D",
+                    "Cupertino, CA 95014"
+                ]
+            },
+            "phone": "+16507722222",
+            "display_phone": "(650) 772-2222",
+            "distance": 8.946362731429797
+        },
+        {
+            "id": "Q0s4evO-h2RHNGRr5QFBAA",
+            "alias": "tea-era-cupertino",
+            "name": "Tea Era",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/vc8nrgBN7lQgvoiEvIM6QQ/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/tea-era-cupertino?adjust_creative=FWsxiO82XGlqf4jtJ9eo0g&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=FWsxiO82XGlqf4jtJ9eo0g",
+            "review_count": 665,
+            "categories": [
+                {
+                    "alias": "coffee",
+                    "title": "Coffee & Tea"
+                },
+                {
+                    "alias": "bubbletea",
+                    "title": "Bubble Tea"
+                },
+                {
+                    "alias": "taiwanese",
+                    "title": "Taiwanese"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 37.3371504153713,
+                "longitude": -122.04035249287
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$",
+            "location": {
+                "address1": "20916 Homestead Rd",
+                "address2": "Ste F",
+                "address3": "",
+                "city": "Cupertino",
+                "zip_code": "95014",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "20916 Homestead Rd",
+                    "Ste F",
+                    "Cupertino, CA 95014"
+                ]
+            },
+            "phone": "+14089969898",
+            "display_phone": "(408) 996-9898",
+            "distance": 20.283641333361828
+        },
+        {
+            "id": "ytUMBIz2IkLoX07kfWq8_w",
+            "alias": "mcdonalds-cupertino-2",
+            "name": "McDonald's",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/69XVXy4RqUDmRY_GoN6yyg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/mcdonalds-cupertino-2?adjust_creative=FWsxiO82XGlqf4jtJ9eo0g&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=FWsxiO82XGlqf4jtJ9eo0g",
+            "review_count": 118,
+            "categories": [
+                {
+                    "alias": "hotdogs",
+                    "title": "Fast Food"
+                },
+                {
+                    "alias": "burgers",
+                    "title": "Burgers"
+                },
+                {
+                    "alias": "coffee",
+                    "title": "Coffee & Tea"
+                }
+            ],
+            "rating": 2.5,
+            "coordinates": {
+                "latitude": 37.3372,
+                "longitude": -122.04099
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$",
+            "location": {
+                "address1": "10990 N Stelling Rd",
+                "address2": "",
+                "address3": "",
+                "city": "Cupertino",
+                "zip_code": "95014",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "10990 N Stelling Rd",
+                    "Cupertino, CA 95014"
+                ]
+            },
+            "phone": "+14082557576",
+            "display_phone": "(408) 255-7576",
+            "distance": 61.37144917338163
+        },
+        {
+            "id": "K6KLjqimhPvrjHE2AKM4ag",
+            "alias": "starbucks-cupertino-12",
+            "name": "Starbucks",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/c3Hio5o_LdrR_Hfbl4G5EQ/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/starbucks-cupertino-12?adjust_creative=FWsxiO82XGlqf4jtJ9eo0g&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=FWsxiO82XGlqf4jtJ9eo0g",
+            "review_count": 56,
+            "categories": [
+                {
+                    "alias": "coffee",
+                    "title": "Coffee & Tea"
+                }
+            ],
+            "rating": 3.0,
+            "coordinates": {
+                "latitude": 37.336786,
+                "longitude": -122.036405
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "20676 West Homestead Rd",
+                "address2": "",
+                "address3": "",
+                "city": "Cupertino",
+                "zip_code": "95014",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "20676 West Homestead Rd",
+                    "Cupertino, CA 95014"
+                ]
+            },
+            "phone": "+12063793845",
+            "display_phone": "(206) 379-3845",
+            "distance": 349.5806804332368
+        },
+        {
+            "id": "CJoHqj5BZPjVCWVKQy6jOQ",
+            "alias": "gong-cha-sunnyvale",
+            "name": "Gong Cha",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Fxh3Y_JUwPKemNqxIhnsRA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/gong-cha-sunnyvale?adjust_creative=FWsxiO82XGlqf4jtJ9eo0g&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=FWsxiO82XGlqf4jtJ9eo0g",
+            "review_count": 123,
+            "categories": [
+                {
+                    "alias": "bubbletea",
+                    "title": "Bubble Tea"
+                },
+                {
+                    "alias": "coffee",
+                    "title": "Coffee & Tea"
+                },
+                {
+                    "alias": "juicebars",
+                    "title": "Juice Bars & Smoothies"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 37.33929,
+                "longitude": -122.04255
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$",
+            "location": {
+                "address1": "1641 Hollenbeck Ave",
+                "address2": "",
+                "address3": "",
+                "city": "Sunnyvale",
+                "zip_code": "94087",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "1641 Hollenbeck Ave",
+                    "Sunnyvale, CA 94087"
+                ]
+            },
+            "phone": "+14086852991",
+            "display_phone": "(408) 685-2991",
+            "distance": 365.9494830627855
+        }
+    ],
+    "total": 484,
+    "region": {
+        "center": {
+            "longitude": -122.04035249287,
+            "latitude": 37.336968
+        }
+    }
+}
