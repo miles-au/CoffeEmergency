@@ -39,9 +39,7 @@ class CafeManager{
     func parse(json: Data) -> Result<[CafeModel], Error>{
         do{
             let decodedData = try JSONDecoder().decode(CafeData.self, from: json)
-            let cafes: [CafeModel] = decodedData.businesses.map { cafeItem in
-                return CafeModel.from(cafeData: cafeItem)
-            }
+            let cafes: [CafeModel] = decodedData.businesses.map { CafeModel.from(cafeData: $0) }
             
             return .success(cafes)
         }catch{
